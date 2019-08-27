@@ -5,11 +5,11 @@ Using this module, you can select a specific view for any category, product, fol
 
 Activate the module and go to the "Modules" tab of any category, product, folder or content configuration page.
 
-##The loop view
+## The loop view
 
 Get the specific view of an object and the specific views of its sub-elements.
 
-###Parameters
+### Parameters
 
 |Argument       |Description    |
 |---            |---            |
@@ -18,7 +18,7 @@ Get the specific view of an object and the specific views of its sub-elements.
 |**source**     | The type of the source associated. The possible values are `category`, `product`, `folder` or `content`   |
 |**source_id**  | The ID of the source associated  |
 
-###Output variables
+### Output variables
 
 |Variables      |Description    |
 |---            |---            |
@@ -29,21 +29,21 @@ Get the specific view of an object and the specific views of its sub-elements.
 |$SUBTREE_VIEW  | The name of the specific view associated with the sub-element (sub-category or sub-folder) of the source |
 |$CHILDREN_VIEW | The name of the specific view associated with the children (products or contents) of the source|
 
-###Example
+### Example
 
 ```
 {loop type="view" name="my-specific-view" source="content" source_id=11}...{/loop}
 ```
 
-##The loop frontfiles
+## The loop frontfiles
 
 Return all the front office templates and their path.
 
-###Parameters
+### Parameters
 
 This loop have no parameters
 
-###Output variables
+### Output variables
 
 |Variables      |Description    |
 |---            |---            |
@@ -53,17 +53,17 @@ This loop have no parameters
 |$ABSOLUTE_PATH | The absolute path of the template |
 
 
-###Example
+### Example
 
 ```
 {loop type="frontfile" name="my-fo-template"}...{/loop}
 ```
 
-##The loop frontview
+## The loop frontview
 
 Return view of an object if the object have a specific view.
 
-###Parameters
+### Parameters
 
 |Argument      |Description    |
 |---           |---            |
@@ -71,7 +71,7 @@ Return view of an object if the object have a specific view.
 |**source_id** | The ID of the object |
 
 
-###Output variables
+### Output variables
 
 |Variables  |Description    |
 |---        |---            |
@@ -79,7 +79,7 @@ Return view of an object if the object have a specific view.
 |VIEW_ID    | The id of the view in the view table |
 
 
-###Example
+### Example
 
 ```
 {loop type="frontview" name="my-frontview-loop" source="category" source_id=11 }...{/loop}
