@@ -3,6 +3,12 @@ View module
 
 Using this module, you can select a specific view for any category, product, folder or content.
 
+## Installation
+
+```
+composer require thelia/view-module:~2.0.1
+```
+
 Activate the module and go to the "Modules" tab of any category, product, folder or content configuration page.
 
 ## The loop view
