@@ -32,13 +32,11 @@ class ControllerListener implements EventSubscriberInterface
         foreach ($possibleMatches as $parameter => $objectType) {
             // Search for a view when the parameter is present in the request, and
             // the current view is the default one (fix for https://github.com/AnthonyMeedle/thelia-modules-View/issues/6)
-            //dump($currentView);die();
             if ($currentView == $objectType && (null !== $objectId = $request->query->get($parameter))) {
 
                 $findEvent = new FindViewEvent($objectId, $objectType);
                 $event->getDispatcher()->dispatch('view.find', $findEvent);
 
-                dump($findEvent->getView());
                 if ($findEvent->hasView()) {
                     $event->getRequest()->query->set('view', $findEvent->getView());
                 }
