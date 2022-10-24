@@ -14,14 +14,14 @@ use Thelia\Core\Hook\BaseHook;
 
 class HookManager extends BaseHook
 {
-    public function onModuleConfiguration(HookRenderEvent $event)
+    public function onModuleConfiguration(HookRenderEvent $event): void
     {
         $event->add(
             $this->render("ViewConfiguration.html")
         );
     }
 
-    public function onEditModuleTab(HookRenderEvent $event)
+    public function onEditModuleTab(HookRenderEvent $event): void
     {
         $view = $event->getArgument('view');
         $event->add(
