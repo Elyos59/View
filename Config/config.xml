@@ -21,16 +21,6 @@
         -->
     </commands>
 
-    <services>
-        <service id="view.listener" class="View\Listener\ViewListener">
-            <argument type="service" id="service_container"/>
-            <tag name="kernel.event_subscriber"/>
-        </service>
-        <service id="module.view.listener" class="View\Listener\ControllerListener">
-            <tag name="kernel.event_subscriber"/>
-        </service>
-    </services>
-
     <hooks>
         <hook id="view.hookmanager.hook" class="View\Hook\HookManager">
             <tag name="hook.event_listener" event="module.configuration" type="back" method="onModuleConfiguration"/>
